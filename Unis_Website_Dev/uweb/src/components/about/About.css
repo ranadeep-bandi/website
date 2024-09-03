@@ -1,0 +1,265 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  margin-top: 60px;
+}
+ 
+body {
+  background-color: #ffffff;
+  margin-top: 50px;
+}
+ 
+.unis2 {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  min-height: 100vh;
+  margin-top: 40px;
+}
+ 
+/* Heading Styles */
+.heading {
+  font-size: 3rem;
+  color: #e94560;
+  text-align: center;
+  margin-top: 100px;
+}
+ 
+/* Main Part Styles */
+.MainPart, .MainPart1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  margin-top: -50px;
+}
+ 
+.Part1, .Part3 {
+  flex: 1;
+  margin: 10px;
+}
+ 
+.Part2, .Image1 {
+  flex: 1;
+  margin: 10px;
+}
+ 
+.image1, .image2 {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+ 
+.image2:hover {
+  transform: scale(1.05);
+}
+ 
+.Part1 p, .Part3 p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+ 
+.Part1 h3, .Part3 h3 {
+  font-size: 2rem;
+  color: #333;
+  /* border-bottom: 3px solid #e94560; */
+ 
+  padding-bottom: 10px;
+}
+ 
+/* Description Section */
+.Description {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ 
+.Description .description-section {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+ 
+.Description .description-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+ 
+.Description h3 {
+  font-size: 2rem;
+  color: #e94560;
+  margin-bottom: 20px;
+}
+ 
+.Description p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+ 
+/* About Cards Section */
+.AboutCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 20px;
+  list-style-type: none;
+}
+ 
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 300px;
+  margin: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+ 
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+ 
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+ 
+.card-content {
+  padding: 20px;
+  background-color: #ffffff;
+}
+ 
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+ 
+.card-description {
+  color: #555;
+  font-size: 0.9rem;
+}
+ 
+/* Footer Section */
+.footer {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+ 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+    margin-top: 100px;
+  }
+ 
+  .MainPart, .MainPart1 {
+    padding: 20px;
+    flex-direction: column;
+  }
+ 
+  .Part1, .Part2, .Part3, .Image1 {
+    margin: 0;
+    width: 100%;
+  }
+ 
+  .image1, .image2 {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+ 
+  .image2 {
+    width: 100%;
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    max-height: 300px; /* Limits the maximum height */
+  }
+ 
+  .Part1 p, .Part3 p {
+    font-size: 1rem;
+  }
+ 
+  .Part1 h3, .Part3 h3 {
+    font-size: 1.5rem;
+  }
+ 
+  .Description {
+    flex-direction: column;
+  }
+ 
+  .Description .description-section {
+    margin: 10px 0;
+  }
+ 
+  .Description h3 {
+    font-size: 1.5rem;
+  }
+ 
+  .Description p {
+    font-size: 1rem;
+  }
+ 
+  .card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+ 
+  .card-image {
+    height: 150px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+ 
+  .Part1 p, .Part3 p {
+    font-size: 0.9rem;
+  }
+ 
+  .Part1 h3, .Part3 h3 {
+    font-size: 1.2rem;
+  }
+ 
+  .Description h3 {
+    font-size: 1.2rem;
+  }
+ 
+  .Description p {
+    font-size: 0.9rem;
+  }
+ 
+  .image2 {
+    max-height: 200px; /* Further limits the height for very small screens */
+  }
+}
+ 
+.description-section{
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(13, 20, 77) 100%
+  )
+}

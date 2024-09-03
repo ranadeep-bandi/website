@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+ 
+/* src/App.css */
+.careers-page01 {
+  padding: 20px;
+  background-color: #f0f4f8;
+  font-family: 'Ubuntu', sans-serif; /* Apply Ubuntu font */
+}
+ 
+.heading-section01 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+ 
+.h1-01 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #081ff0; /* Match the card gradient color */
+  font-weight: 600;
+}
+ 
+.p1-01 {
+  font-size: 1.2em;
+  color: #333;
+  max-width: 80%;
+  margin: 0 auto;
+  font-weight:500;
+}
+ 
+.profile-card-container01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+ 
+.profile-card01 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(135deg, #081ff0 0%, #153053 100%); */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 30px; /* Increased padding */
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 750px; /* Increased width */
+  color: #fff; /* White text for contrast */
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+ 
+.img-01 {
+  border-radius: 50%;
+  width: 140px; /* Increased image size */
+  height: 140px;
+  border: 3px solid #fff; /* White border around the image */
+  margin-right: 20px;
+}
+ 
+.profile-content01 {
+  text-align: left;
+}
+ 
+.h2-01 {
+  margin: 0 0 5px;
+}
+ 
+.h4-01 {
+  margin: 5px 0;
+  font-weight: bold;
+  opacity: 0.8;
+}
+ 
+.p2-01 {
+  font-size: 1em; /* Slightly larger text */
+  opacity: 0.9;
+}
+ 
+.profile-card01:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+ 
+.profile-card01::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  transition: all 0.9s ease;
+  opacity: 0;
+}
+ 
+.profile-card01:hover::before {
+  opacity: 1;
+  transform: rotate(45deg) translateX(100%);
+  transition: all 0.5s ease;
+}
+ 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

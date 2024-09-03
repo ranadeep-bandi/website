@@ -1,0 +1,133 @@
+/* Container Styles */
+.unis-1 {
+  
+   /* Reduced margin for better fit on mobile */
+  margin-top: 150px;
+  text-align: center; /* Adjusted top margin */
+
+}
+
+.heading-c {
+  text-align: center;
+  margin: 20px; /* Reduced margin for better fit on mobile */
+  margin-bottom: 10px;
+  font-size: 100px; /* Reduced bottom margin */
+}
+
+/* Container for Description and Image */
+.container-1-c {
+  width: 100%; /* Full width for mobile view */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: center;
+  margin: auto;
+  margin-bottom: 40px; /* Reduced margin for better fit on mobile */
+}
+
+.Description-c {
+  width: 90%; /* Adjusted width for mobile view */
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.image1-c {
+  width: 90%; /* Adjusted width for mobile view */
+  max-width: 300px; /* Added max-width for better control */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Banner Card Styles */
+.banner-card-c {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 100%; /* Full width on mobile */
+  margin: 10px 0; /* Reduced margin for better fit on mobile */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+/* Hover Effect */
+.banner-card-c:hover {
+  border-color: #49525b; /* Change border color on hover */
+  background-color: #f0f8ff; /* Light background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+
+/* Heading in Banner Card */
+.banner-heading-c {
+  font-size: 14px; /* Adjusted font size for better fit on mobile */
+  margin-bottom: 8px; /* Reduced margin */
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Updated Heading */
+.heading-c {
+  color: #555;
+  font-weight: bold;
+  font-size: 20px; /* Adjusted font size for mobile view */
+}
+
+/* Flexbox Layout for Banner Content */
+.banner-main-heading-c {
+  color: #555;
+  font-weight: 900;
+  font-size: 18px; /* Adjusted font size for mobile view */
+  text-align: center;
+  margin-top: 10px; /* Adjusted margin for spacing */
+}
+
+.banner-content-c {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: center;
+}
+
+/* Banner Image Styles */
+.banner-image-c {
+  max-width: 100%; /* Ensure image scales to fit container */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0; /* Removed margin-right for better fit on mobile */
+  border-radius: 8px;
+}
+
+/* Banner Description Styles */
+.banner-description-c {
+  font-size: 16px; /* Adjusted font size for mobile view */
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .unis-c {
+    margin: 10px; /* Reduced margin for mobile view */
+  }
+  .banner-card-c {
+    max-width: 100%; /* Ensure banner card takes full width on small screens */
+  }
+  .banner-image-c {
+    max-width: 100%; /* Ensure image scales to fit container */
+  }
+  .unis-c {
+    box-sizing: border-box;
+    margin: 20px; /* Reduced margin for better fit on mobile */
+    margin-top: 120px; /* Adjusted top margin */
+  }
+}

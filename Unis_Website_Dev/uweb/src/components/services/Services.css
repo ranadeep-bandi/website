@@ -1,0 +1,16 @@
+.unis{
+    box-sizing: border-box;
+    margin: 40px;
+  }
+  .heading{
+    text-align: center;
+   
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .unis{
+      margin: 20px;
+    }
+  }

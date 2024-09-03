@@ -1,0 +1,258 @@
+.navbar {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(13, 20, 77) 100%
+  );
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, padding 0.3s ease, height 0.3s ease;
+  height: 130px;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 30px;
+}
+
+/* Shrink effect when scrolled */
+.navbar.scrolled {
+  padding: 0.5rem;
+  height: 70px;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Transition for logo size changes */
+}
+
+.logo {
+  height: 120px;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+/* Scale down the logo when scrolling */
+.navbar.scrolled .logo {
+  height: 80px; /* Adjust height as needed */
+  transform: scale(0.8); /* Adjust scale factor as needed */
+}
+
+/* Navigation Menu Styling */
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Navigation Items */
+.nav-item {
+  position: relative;
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+}
+
+/* Links and Dropdown Items */
+.nav-link,
+.dropdown-item {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* Hover and Focus Effects */
+.nav-link:hover,
+.nav-link:focus,
+.dropdown-item:hover,
+.dropdown-item:focus {
+  border-radius: 4px;
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 40px;
+  line-height: 40px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-toggle:hover {
+  color: #fff;
+}
+
+/* Arrow styling */
+.dropdown-arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0px;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  min-width: 300px;
+  border-radius: 4px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(13, 20, 77) 100%
+  );
+}
+
+/* Show dropdown when active */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgb(13, 20, 77) 100%
+    );
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 999;
+  }
+
+  .navbar-nav.open {
+    display: flex;
+    opacity: 1;
+    max-height: 800px;
+    margin-top: 5%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-item {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    background-color: #012C55;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-item.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Toggle Button */
+  .navbar-toggler {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    z-index: 1001; /* Ensure it is above other content */
+  }
+
+  .toggler-icon {
+    font-size: 24px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  /* Disable scrolled effect on mobile */
+  .navbar.scrolled {
+    padding: 1rem; /* Adjust padding for mobile if needed */
+    height: 130px; /* Adjust height for mobile if needed */
+  }
+
+  .navbar.scrolled .logo {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .navbar.scrolled {
+    padding: 0.5rem;
+    height: 90px;
+  }
+}
+
+/* Hide toggle button on larger screens */
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none;
+  }
+}

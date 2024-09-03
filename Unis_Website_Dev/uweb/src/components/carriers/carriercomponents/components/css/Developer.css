@@ -1,0 +1,76 @@
+.main0002 {
+  text-align: center;
+  color: #100536;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+ 
+.paragraph002 {
+  text-align: center;
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 2rem;
+}
+ 
+.content003 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 1.5rem;
+  margin-top: 3%;
+  color: #100536;
+}
+ 
+.images004 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+ 
+.button005 {
+  background-color: rgb(0, 0, 255);
+  color: white;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 18%;
+}
+ 
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main0002 {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
+ 
+  .paragraph002 {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+ 
+  .content003 {
+    grid-template-columns: 1fr; /* Single column layout for mobile screens */
+    gap: 1rem;
+    padding: 0 1rem; /* Add some padding for mobile screens */
+  }
+ 
+  .button005 {
+    margin-left: 0; /* Reset margin for mobile screens */
+    margin: auto; /* Center button */
+  }
+}
+ 
+@media (max-width: 480px) {
+  .main0002 {
+    font-size: 1.2rem; /* Further adjust font size for very small screens */
+  }
+ 
+  .paragraph002 {
+    font-size: 0.9rem; /* Further adjust font size for very small screens */
+  }
+ 
+  .content003 {
+    padding: 0 0.5rem; /* Less padding for very small screens */
+  }
+ 
+  .images004 img {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Set a maximum width */
+  }
+}

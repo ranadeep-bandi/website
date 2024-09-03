@@ -1,0 +1,39 @@
+
+body {-ms-overflow-style: none; 
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;}
+  
+  
+  body::-webkit-scrollbar {display: none; /* for Chrome, Safari, and Opera */}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .unis{
+    margin: 20px;
+  }
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(13, 20, 77) 100%
+  );
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
